@@ -1,39 +1,40 @@
-# Dataset
-FungiTastic is a machine learning dataset for classification of fungi from images and metadata.
+![Species Similarities and differences](assets/img/banner.png)
 
-> **Disclaimer:** We are currently working on consolidating the code in different branches. 
+<div align="center">
+<hr>
+<a href="https://huggingface.co/collections/BVRA/fungitastic-66a227ce0520be533dc6403b"><img src="https://img.shields.io/badge/🤖%20Hugging%20Face-Models-blue" /></a>
+<a href="https://arxiv.org/pdf/2408.13632"><img src="https://img.shields.io/badge/📄%20Proceedings-CVF-red" /></a>
+<br><br>
+</div>
 
-### Branch overview:
+> ⚠️ All active development and documentation is available in **dev**. Feel free to open issues or pull requests against **dev**!
 
-- **datasets_and_baselines**
-  - Contains PyTorch datasets for all tasks
-  - Includes many visualization functions
-  - Provides a download script
-  - Contains baselines for few-shot classification
+> 🚧 **Work in Progress**  
+> Most of our guides, examples, baselines and the full dataset download instructions live in the **dev** branch.  
+> Please head over there for the latest code, tutorials, and model checkpoints!
 
-- **picekl/training-scripts**
-  - Scripts for standard open/closed set classification
-  - Contains experiments with metadata
-  - Includes code to prepare the metadata
+# FungiTastic
 
-- **zero_shot_seg**
-  - Segmentation baseline based on GroundingDINO + SAM
+FungiTastic is a large-scale, multimodal benchmark and dataset of fungal observations spanning 20 years, expert-verified (including DNA-sequenced ground truth) and enriched with environmental, geospatial, and segmentation metadata. It supports a wide range of tasks:
 
-- **feat/custom_metrics**
-  - Contains evaluation metrics
+- **Closed-set & Open-set Classification**  
+- **Few-shot & Chronological Classification**  
+- **Cost-sensitive Classification**  
+- **Semantic & Instance Segmentation**
 
-## Installation
-[Installation instructions will be here]
+### Quick Links
 
-## Statistics
-[Plots will appear here]
+- 🌱 **Development branch**: [Dev Branch](https://github.com/BohemianVRA/FungiTastic/tree/dev)  
+- 📥 **Dataset download guide**: [Dev/dataset/README.md](https://github.com/BohemianVRA/FungiTastic/tree/dev/dataset)  
+- 🤗 **Pretrained models**: [HuggingFace collection](https://huggingface.co/collections/BVRA/fungitastic-66a227ce0520be533dc6403b)  
+- 📊 **Paper & benchmarks**: [arXiv 2408.13632](https://arxiv.org/pdf/2408.13632)  
 
+## Getting Started
 
-# Evaluation
-Lorem impsun.
-## Baseline methods
+If you’re new, jump into the **dev** branch:
 
-
-# Paper
-[Link will appear here]
-BibTex citation:
+```bash
+git https://github.com/BohemianVRA/FungiTastic/
+cd FungiTastic
+git checkout dev
+```
