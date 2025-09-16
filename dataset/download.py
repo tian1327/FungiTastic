@@ -193,11 +193,13 @@ class FungiTasticDownloader:
         Returns:
             str: The generated URL for the image download.
         """
-        size_str = f"{size}p" if size != "fullsize" else "fullsize"
+        # size_str = f"{size}p" if size != "fullsize" else "fullsize"
+        size_str = f"-{size}p" if size != "fullsize" else ""
+
         if subset != "full":
-            return f"{self.DOWNLOAD_ROOT}/FungiTastic-{self.SUBSET2STR.get(subset, '')}-{split}-{size_str}.zip"
+            return f"{self.DOWNLOAD_ROOT}/FungiTastic-{self.SUBSET2STR.get(subset, '')}-{split}{size_str}.zip"
         else:
-            return f"{self.DOWNLOAD_ROOT}/FungiTastic-{split}-{size_str}.zip"
+            return f"{self.DOWNLOAD_ROOT}/FungiTastic-{split}{size_str}.zip"
 
     def download(self, subset: str = None, size: str = None) -> None:
         """
